@@ -9,20 +9,21 @@ load_dotenv()
 class AgentState(TypedDict):
     messages: List[HumanMessage]
 
-llm = ChatOpenAI(model="gpt-4o")
+llm = ChatOpenAI(model="gpt-4o-mini")
 
 def process(state: AgentState) -> AgentState:
-    response = llm.invoke(state["messages"])
-    print(f"\nAI: {response.content}")
+    response = llm.invoke(state['messages'])
+    print(f"\nAI Bot: {response.content}")
     return state
 
 graph = StateGraph(AgentState)
 graph.add_node("process", process)
 graph.add_edge(START, "process")
-graph.add_edge("process", END) 
+graph.add_edge("process", END)
+
 agent = graph.compile()
 
 user_input = input("Enter: ")
-while user_input != "exit":
-    agent.invoke({"messages": [HumanMessage(content=user_input)]})
+while user_input.lower() != "exit":
+    agent.invoke({'messages': [HumanMessage(content=user_input)]})
     user_input = input("Enter: ")
