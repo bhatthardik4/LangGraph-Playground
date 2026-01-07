@@ -1,8 +1,4 @@
-# LangGraph Course
-
-Repository for all of the code written for the FreeCodeCamp LangGraph Course, including solutions for all exercises. This repo provides practical examples of using [LangGraph](https://github.com/langchain-ai/langgraph) for building agent-based applications through Python scripts and interactive Jupyter notebooks.
-
----
+# LangGraph 
 
 ## Table of Contents
 
@@ -129,17 +125,6 @@ jupyter lab
 - Open and run Jupyter notebooks in `Graphs/` and `Exercises/` for hands-on practice and exploration.
 - Run agent scripts in `Agents/` for more advanced experiments.
 - All code is designed to work in a local, isolated Python environment managed by pyenv and uv.
-
----
-
-## Exercises
-
-- Explore the `Exercises/` directory for self-contained solutions to LangGraph problems.
-- Example notebooks:
-  - `Exercise_Graph1.ipynb`: Agent state and basic graph usage.
-  - `Exercise_Graph2.ipynb`: User input and graph visualization.
-  - `Exercise_Graph3.ipynb`: Personalization and skills-based responses.
-  - `Exercise_Graph4.ipynb`, `Exercise_Graph5.ipynb`: Advanced graph operations.
 
 ---
 
